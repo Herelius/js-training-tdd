@@ -8,6 +8,14 @@
  */
 
 // Your code:
+function capitalize(str) {
+    let output = [];
+    output[0] = str[0].toUpperCase();
+    for (let i = 1; i < str.length; i++) {
+        output[i] = str[i].toLowerCase();
+    };
+    return output.join("");
+};
 
 //* Begin of tests
 const assert = require('assert');
