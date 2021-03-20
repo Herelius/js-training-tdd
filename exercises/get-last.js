@@ -8,6 +8,10 @@
  */
 
 // Your code:
+function getLast(input) {
+    let lastItem = input.length - 1;
+    return input[lastItem];
+};
 
 //* Begin of tests
 const assert = require('assert');
