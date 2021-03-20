@@ -9,6 +9,29 @@
  */
 
 // Your code:
+function multiply(num1, num2) {
+    let result = 0;
+    if (num1 === 0 || num2 === 0) {
+        result = 0;
+    } else if (num1 < 0 && num2 < 0) {
+        for (let i = 0; i < Math.abs(num2); i++) {
+            result = result - num1;
+        }
+    } else if (num1 > 0 && num2 < 0) {
+        for (let i = 0; i < Math.abs(num2); i++) {
+            result = result - num1;
+        }
+    } else if (num1 < 0 && num2 > 0) {
+        for (let i = 0; i < num2; i++) {
+            result = result + num1;
+        } 
+    } else if (num1 > 0 && num2 > 0) {
+        for (let i = 0; i < num2; i++) {
+            result += num1;
+        }
+    };
+    return result;
+};
 
 //* Begin of tests
 const assert = require('assert');
